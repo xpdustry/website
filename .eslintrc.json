@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "plugin:react/recommended",
+    "overrides": [
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": [ "warn", "tab" ],
+        "linebreak-style": [ "warn", "unix" ],
+        "quotes": [ "warn", "single" ],
+        "semi": [ "warn", "always" ],
+        "no-empty": [ "warn", { "allowEmptyCatch": true }],
+        "no-empty-function" : "warn",
+        "no-empty-character-class": "warn",
+        "no-empty-pattern": "warn"
+    }
+}
