@@ -21,33 +21,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Install Node.js
+        uses: actions/setup-node@v1
         with:
-          source: ./
-          destination: ./_site
+          node-version: 16.x
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Install NPM packages
+        run: npm ci
 
-  # Deployment job
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./build
+
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    name: Deploy
     needs: build
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
