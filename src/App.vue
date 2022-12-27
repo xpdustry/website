@@ -1,4 +1,5 @@
 <script lang="ts">
+import { defineComponent } from 'vue'
 import Home from './routes/Home.vue'
 import NotFound from './routes/NotFound.vue'
 
@@ -6,23 +7,23 @@ const routes = {
   '/': Home
 }
 
-export default {
+export default defineComponent({
   data () {
     return {
-      currentPath: window.location.hash
+      currentPath: window.location.pathname
     }
   },
   computed: {
     currentView () {
-      return routes[this.currentPath.slice(1) as keyof typeof routes || '/'] || NotFound
+      return routes[this.currentPath as keyof typeof routes] || NotFound
     }
   },
   mounted (): void {
     window.addEventListener('hashchange', () => {
-      this.currentPath = window.location.hash
+      this.currentPath = window.location.pathname
     })
   }
-}
+})
 </script>
 
 <template>
