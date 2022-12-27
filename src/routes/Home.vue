@@ -1,12 +1,12 @@
 <template>
-  <div class="p-4 h-screen nice-gradient">
+  <div class="p-4 h-screen bg-gradient-to-tl from-custom-cyan to-custom-green animate-[nice-gradient-animation_15s_ease_infinite] bg-[length:400%_400%] font-avenir antialiased text-center text-[#2c3e50]">
     <header class="flex flex-row w-full">
       <nav class="basis-1/2 flex flex-row">
         <a class="rounded-lg bg-white drop-shadow-lg w-12 h-12 m-2 p-2" href="#">
           <XpdustryIcon class="fill-cyan-400"/>
         </a>
       </nav>
-      <div class="basis-1/2 flex flex-row flex-row-reverse">
+      <div class="basis-1/2 flex flex-row-reverse">
         <a class="rounded-lg bg-white drop-shadow-lg w-12 h-12 m-2 p-2" href="https://discord.xpdustry.fr">
           <DiscordIcon class="fill-cyan-400"/>
         </a>
@@ -15,7 +15,7 @@
         </a>
       </div>
     </header>
-    <main class="m-4 h-80 vertical-center-please">
+    <main class="m-4 h-80 flex items-center">
       <div class="w-full">
         <h1 class="font-audiowide text-4xl md:text-8xl justify-center m-4">
           Xpdustry
@@ -25,8 +25,6 @@
         </p>
       </div>
     </main>
-    <div>
-    </div>
   </div>
 </template>
 
@@ -49,30 +47,7 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-@font-face {
-  font-family: "Audiowide";
-  src: local("Audiowide"), url(@/assets/fonts/audiowide/Audiowide-Regular.ttf) format("truetype");
-}
-
-.font-audiowide {
-  font-family: Audiowide, Helvetica, Arial, serif;
-}
-
 /* https://codepen.io/hylobates-lar/pen/qBbQeON */
-.nice-gradient {
-  background: linear-gradient(-45deg, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: nice-gradient-animation 15s ease infinite;
-}
-
 @keyframes nice-gradient-animation {
   0% {
     background-position: 0 50%;
@@ -83,9 +58,5 @@ export default defineComponent({
   100% {
     background-position: 0 50%;
   }
-}
-
-.vertical-center-please {
-  @apply flex items-center
 }
 </style>
