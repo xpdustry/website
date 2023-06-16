@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Xpdustry",
+  "name": "Xpdustry",
+  "description": "We provide tools for Mindustry players",
   "icons": [
     {
       "src": "favicon.ico",
