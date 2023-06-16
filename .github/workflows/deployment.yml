@@ -2,12 +2,12 @@ name: Deploy
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   workflow_dispatch:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 permissions:

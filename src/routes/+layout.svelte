@@ -1,7 +1,7 @@
 <script lang="ts">
-	import '../app.postcss';
-	import '/src/styles/app.css';
-	import Header from '$lib/components/Header.svelte';
+	import '../app.postcss'
+	import '/src/styles/app.css'
+	import Header from '$lib/components/Header.svelte'
 </script>
 
 <div class="layout">

@@ -2,43 +2,49 @@
 @import '@fontsource-variable/jetbrains-mono';
 
 html {
-    --xpd-font: 'Audiowide', sans-serif;
-    --monospace: 'JetBrains Mono Variable', sans-serif;
-    --normal-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";   
-    --font-clr: #2c3e50; 
-    --grad-color-start: #23a6d5;
-    --grad-color-end: #23d5ab;
-    /* from #23a6d5 to #23d5ab*/
+	--xpd-font: 'Audiowide', sans-serif;
+	--monospace: 'JetBrains Mono Variable', sans-serif;
+	--normal-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+	--font-clr: #2c3e50;
+	--grad-color-start: #23a6d5;
+	--grad-color-end: #23d5ab;
+	/* from #23a6d5 to #23d5ab*/
 }
 
 /* reset */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-
 :root {
-    font-family: var(--normal-font);
-    background: var(--grad-color-start);
-    background: linear-gradient(170deg, rgba(35,166,213,1) 0%, rgba(35,213,171,1) 90%);
-    animation: GradientMove 5s ease infinite;
-    background-size: 400% 400%;
-    color: var(--font-clr);
+	font-family: var(--normal-font);
+	background: var(--grad-color-start);
+	background: linear-gradient(170deg, rgba(35, 166, 213, 1) 0%, rgba(35, 213, 171, 1) 90%);
+	animation: GradientMove 5s ease infinite;
+	background-size: 400% 400%;
+	color: var(--font-clr);
 }
 
 a {
-    text-decoration: none;
-    color: var(--font-clr);
+	text-decoration: none;
+	color: var(--font-clr);
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 @keyframes GradientMove {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
