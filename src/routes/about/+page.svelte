@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="top">
-    <h1>About</h1>
+	<h1>About</h1>
 </div>
 
 <style>

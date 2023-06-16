@@ -13,7 +13,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-        text-align: center;
+		text-align: center;
 	}
 
 	.top h1 {

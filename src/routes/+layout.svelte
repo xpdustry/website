@@ -6,9 +6,9 @@
 
 <svelte:head>
 	<meta name="theme-color" content="#23a6d5" />
-	<meta name="keywords" content="Mindustry, Xpdustry, Game , Server">
-	<meta name="description" content="A mindustry server. Join us in an epic adventure">
-	<meta name="author" content="Xpdustry">
+	<meta name="keywords" content="Mindustry, Xpdustry, Game , Server" />
+	<meta name="description" content="A mindustry server. Join us in an epic adventure" />
+	<meta name="author" content="Xpdustry" />
 </svelte:head>
 
 <div class="layout">
