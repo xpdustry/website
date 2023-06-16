@@ -10,8 +10,8 @@
 	</a>
 
 	<ul class="links">
-		<a href="/servers">servers</a>
-		<a href="/about">about</a>
+		<!-- <a href="/servers">servers</a> -->
+		<!-- <a href="/about">about</a> -->
 		<a href="https://github.com/Xpdustry" target="_blank"
 			><svg
 				width="15"

@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Xpdustry</title>
+</svelte:head>
+
 <div class="top">
 	<h1>Xpdustry</h1>
 	<p><em>The first and only Mindustry French server since 2019</em></p>
@@ -9,6 +13,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+        text-align: center;
 	}
 
 	.top h1 {

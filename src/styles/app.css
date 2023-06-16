@@ -22,9 +22,7 @@ html {
 :root {
 	font-family: var(--normal-font);
 	background: var(--grad-color-start);
-	background: linear-gradient(170deg, rgba(35, 166, 213, 1) 0%, rgba(35, 213, 171, 1) 90%);
-	animation: GradientMove 5s ease infinite;
-	background-size: 400% 400%;
+	background: linear-gradient(170deg, #23a6d5 0%, #23d5ab 90%);
 	color: var(--font-clr);
 }
 

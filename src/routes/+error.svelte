@@ -2,6 +2,10 @@
 	import { page } from '$app/stores'
 </script>
 
+<svelte:head>
+	<title>Xpdustry | {$page.status} - Bruh, what are you doing ?</title>
+</svelte:head>
+
 <div class="error">
 	<h1>{$page.status}</h1>
 	<i><b>Bruh, what are you doing ?</b></i>
