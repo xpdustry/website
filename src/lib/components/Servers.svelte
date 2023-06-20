@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let loading: boolean = true
+	export let loading = true
 </script>
 
 <div class="server-box" class:loading />
