@@ -1,24 +1,20 @@
-# xpdustry-website
+# xpdusrty-website
 
-## Project setup
-```
-npm install
-```
+## Developing
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```bash
+pnpm run dev
 
-### Compiles and minifies for production
-```
-npm run build
+# or start the server and open the app in a new browser tab
+pnpm run dev -- --open
 ```
 
-### Lints and fixes files
-```
-npm run lint
+## Building
+
+To create a production version of the app:
+
+```bash
+pnpm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+You can preview the production build with `npm run preview`.
