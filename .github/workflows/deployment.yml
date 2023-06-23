@@ -34,10 +34,10 @@ jobs:
           node-version: 16.x
 
       - name: Install NPM packages
-        run: pnpm i
+        run: npm i
 
       - name: Build project
-        run: pnpm build
+        run: npm build
 
       # - name: Run tests
       #   run: npm run test
