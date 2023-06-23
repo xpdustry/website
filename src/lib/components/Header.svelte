@@ -3,16 +3,18 @@
 </script>
 
 <nav>
-	<a class="brand" href="/">
+	<a class="brand" href="/" title="Go to the home page">
 		<div class="logo">
 			<img src={xpdLogo} alt="xpdustry's brand logo" />
 		</div>
 	</a>
 
-	<ul class="links">
+	<div class="links">
 		<!-- <a href="/servers">servers</a> -->
 		<!-- <a href="/about">about</a> -->
-		<a href="https://github.com/Xpdustry" target="_blank"
+		<a href="https://github.com/Xpdustry"
+       target="_blank"
+       title="The Github page"
 			><svg
 				width="15"
 				height="15"
@@ -27,7 +29,9 @@
 				/></svg
 			></a
 		>
-		<a href="http://discord.xpdustry.fr" target="_blank"
+		<a href="http://discord.xpdustry.fr"
+       target="_blank"
+       title="An invintation link to join the discord"
 			><svg
 				width="15"
 				height="15"
@@ -39,7 +43,7 @@
 				/></svg
 			></a
 		>
-	</ul>
+	</div>
 </nav>
 
 <style>
@@ -69,12 +73,12 @@
 		width: 100%;
 	}
 
-	.links {
+	div.links {
 		display: flex;
 		gap: 1rem;
 	}
 
-	.links a {
+	div.links a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
