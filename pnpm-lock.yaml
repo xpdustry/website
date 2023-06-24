@@ -58,6 +58,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.4.4
     version: 3.4.4(postcss@8.4.24)(svelte@4.0.0)
+  svelte-migrate:
+    specifier: ^1.2.4
+    version: 1.2.4
   svelte-preprocess:
     specifier: ^5.0.4
     version: 5.0.4(postcss@8.4.24)(svelte@4.0.0)(typescript@5.1.3)
@@ -488,6 +491,15 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
+  /@ts-morph/common@0.20.0:
+    resolution: {integrity: sha512-7uKjByfbPpwuzkstL3L5MQyuXPSKdoNG93Fmi2JoDcTf3pEP731JdRFAduRVkOs8oqxPsXKA+ScrWkdQ8t/I+Q==}
+    dependencies:
+      fast-glob: 3.2.12
+      minimatch: 7.4.6
+      mkdirp: 2.1.6
+      path-browserify: 1.0.1
+    dev: true
+
   /@types/cookie@0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
     dev: true
@@ -738,6 +750,12 @@ packages:
       concat-map: 0.0.1
     dev: true
 
+  /brace-expansion@2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: true
+
   /braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
@@ -806,6 +824,10 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /code-block-writer@12.0.0:
+    resolution: {integrity: sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w==}
     dev: true
 
   /code-red@1.0.3:
@@ -1360,6 +1382,10 @@ packages:
       type-fest: 0.20.2
     dev: true
 
+  /globalyzer@0.1.0:
+    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
+    dev: true
+
   /globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
@@ -1370,6 +1396,10 @@ packages:
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
+    dev: true
+
+  /globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
   /graceful-fs@4.2.11:
@@ -1476,6 +1506,11 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
+  /kleur@3.0.3:
+    resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
+    engines: {node: '>=6'}
+    dev: true
+
   /kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
@@ -1580,6 +1615,13 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
+  /minimatch@7.4.6:
+    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
@@ -1589,6 +1631,12 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.8
+    dev: true
+
+  /mkdirp@2.1.6:
+    resolution: {integrity: sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A==}
+    engines: {node: '>=10'}
+    hasBin: true
     dev: true
 
   /mri@1.2.0:
@@ -1676,6 +1724,10 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       callsites: 3.1.0
+    dev: true
+
+  /path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
 
   /path-exists@4.0.0:
@@ -2074,6 +2126,14 @@ packages:
     hasBin: true
     dev: true
 
+  /prompts@2.4.2:
+    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
+    engines: {node: '>= 6'}
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+    dev: true
+
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
@@ -2175,6 +2235,10 @@ packages:
       '@polka/url': 1.0.0-next.21
       mrmime: 1.0.1
       totalist: 3.0.1
+    dev: true
+
+  /sisteransi@1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
   /slash@3.0.0:
@@ -2292,6 +2356,18 @@ packages:
       svelte: 4.0.0
     dev: true
 
+  /svelte-migrate@1.2.4:
+    resolution: {integrity: sha512-AhO+2+iLw3OPv6eNmO3qlH6dsMnPB3ZWvWXKAkpK2+VZEXiYB9O7g4BPSpn9NnvVe/5kIYsyXc8WexqBc2bd8Q==}
+    hasBin: true
+    dependencies:
+      kleur: 4.1.5
+      magic-string: 0.30.0
+      prompts: 2.4.2
+      tiny-glob: 0.2.9
+      ts-morph: 19.0.0
+      typescript: 5.1.3
+    dev: true
+
   /svelte-preprocess@5.0.4(postcss@8.4.24)(svelte@4.0.0)(typescript@5.1.3):
     resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}
     engines: {node: '>= 14.10.0'}
@@ -2376,6 +2452,13 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
 
+  /tiny-glob@0.2.9:
+    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
+    dev: true
+
   /to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -2386,6 +2469,13 @@ packages:
   /totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
+    dev: true
+
+  /ts-morph@19.0.0:
+    resolution: {integrity: sha512-D6qcpiJdn46tUqV45vr5UGM2dnIEuTGNxVhg0sk5NX11orcouwj6i1bMqZIz2mZTZB1Hcgy7C3oEVhAT+f6mbQ==}
+    dependencies:
+      '@ts-morph/common': 0.20.0
+      code-block-writer: 12.0.0
     dev: true
 
   /tslib@1.14.1:
