@@ -31,7 +31,7 @@
 		>
 		<a href="http://discord.xpdustry.fr"
        target="_blank"
-       title="An invintation link to join the discord"
+       title="An invitation link to join the discord"
 			><svg
 				width="15"
 				height="15"
