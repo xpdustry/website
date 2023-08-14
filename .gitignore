@@ -18,3 +18,4 @@ vite.config.ts.timestamp-*
 *.sln
 *.sw?
 .vercel
+package-lock.json
