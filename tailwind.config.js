@@ -5,8 +5,11 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        audiowide: ['"Audiowide"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
-

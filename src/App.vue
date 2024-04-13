@@ -1,85 +1,27 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import IconDiscord from '@/components/icons/IconDiscord.vue'
+import IconGithub from '@/components/icons/IconGithub.vue'
+import IconXPDark from '@/components/icons/IconXPDark.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+	<div class="p-4 h-screen bg-gradient-to-tl from-cyan-500 to-green-500 text-gray-700">
+		<header class="flex flex-row w-full">
+			<nav class="basis-1/2 flex flex-row">
+				<RouterLink class="rounded-lg bg-white drop-shadow-lg w-12 h-12 m-2 p-2" to="/">
+					<IconXPDark class="fill-cyan-400"/>
+				</RouterLink>
+			</nav>
+			<div class="basis-1/2 flex flex-row-reverse">
+				<a class="rounded-lg bg-white drop-shadow-lg w-12 h-12 m-2 p-2" href="https://discord.xpdustry.fr">
+					<IconDiscord class="fill-cyan-400"/>
+				</a>
+				<a class="rounded-lg bg-white drop-shadow-lg w-12 h-12 m-2 p-2" href="https://github.com/Xpdustry">
+					<IconGithub class="fill-cyan-400"/>
+				</a>
+			</div>
+		</header>
+		<RouterView />
+	</div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
