@@ -22,6 +22,8 @@ import IconXPDark from '@/components/icons/IconXPDark.vue'
 				</a>
 			</div>
 		</header>
-		<RouterView />
+		<main>
+			<RouterView />
+		</main>
 	</div>
 </template>
