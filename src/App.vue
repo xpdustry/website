@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import IconDiscord from '@/components/icons/IconDiscord.vue'
 import IconGithub from '@/components/icons/IconGithub.vue'
 import IconXPDark from '@/components/icons/IconXPDark.vue'
 </script>
 
 <template>
+	<SpeedInsights/>
   <div class="p-4 h-screen bg-gradient-to-tl from-cyan-500 to-green-500 text-gray-700">
     <header class="flex flex-row w-full">
       <nav class="basis-1/2 flex flex-row">
