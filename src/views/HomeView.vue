@@ -8,7 +8,8 @@ const servers = ref<Array<ChaoticServer>>([])
 
 fetch('https://api.xpdustry.com/v0/servers')
   .then((response) => response.json())
-  .then((json) => (json as Array<ChaoticServer>)
+  .then((json) =>
+    (json as Array<ChaoticServer>)
       .filter((server) => server.name !== 'hub')
       .sort((a, b) => a.name.localeCompare(b.name))
   )
@@ -24,12 +25,12 @@ fetch('https://api.xpdustry.com/v0/servers')
         A group of Mindustry developers, hosting servers and providing powerful tools since 2019
       </HomeSectionCard>
       <HomeSectionCard v-for="server in servers" :key="server.name" :title="server.name">
-				<div class="space-y-2 pt-2">
-					<HomeSectionField name="MAP" :value="server.mapName" :slide="true" />
-					<HomeSectionField name="WAVE" :value="server.wave.toString()" />
-					<HomeSectionField name="DESC" :value="server.description" :slide="true" />
-					<HomeSectionField name="PLAYERS" :value="server.playerCount.toString()" />
-				</div>
+        <div class="space-y-2 pt-2">
+          <HomeSectionField name="MAP" :value="server.mapName" :slide="true" />
+          <HomeSectionField name="WAVE" :value="server.wave.toString()" />
+          <HomeSectionField name="DESC" :value="server.description" :slide="true" />
+          <HomeSectionField name="PLAYERS" :value="server.playerCount.toString()" />
+        </div>
       </HomeSectionCard>
     </div>
   </div>

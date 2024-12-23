@@ -32,8 +32,8 @@ function isValidMindustryHex(value: string): boolean {
   return true
 }
 
-function mindustryStyleToHTML(text: String): String {
-  const buffer = Array<String>()
+function mindustryStyleToHTML(text: string): string {
+  const buffer = Array<string>()
   let depth = 0
   for (let i = 0; i < text.length; i++) {
     if (text[i] === '[') {
