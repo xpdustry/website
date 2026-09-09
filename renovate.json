@@ -5,6 +5,14 @@
       "matchPackageNames": ["solid-js", "@solidjs/**", "vite-plugin-solid"],
       "groupName": "solidjs",
       "separateMajorMinor": false
+    },
+    {
+      "matchPackageNames": ["oxfmt", "oxlint"],
+      "groupName": "oxc tools"
+    },
+    {
+      "matchPackageNames": ["node", "docker.io/library/node", "@types/node"],
+      "groupName": "nodejs"
     }
   ]
 }
