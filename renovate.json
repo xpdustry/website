@@ -1,3 +1,10 @@
 {
-  "extends": ["local>xpdustry/.github:renovate-shared"]
+  "extends": ["local>xpdustry/.github:renovate-shared"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["solid-js", "@solidjs/**", "vite-plugin-solid"],
+      "groupName": "solidjs",
+      "separateMajorMinor": false
+    }
+  ]
 }
