@@ -28,8 +28,8 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(@vanilla-extract/css@1.21.2)
       filesystem-routing:
-        specifier: 0.2.1
-        version: 0.2.1(vite@8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
+        specifier: 0.3.0
+        version: 0.3.0(vite@8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
       simple-icons:
         specifier: ^16.28.0
         version: 16.30.0
@@ -1453,11 +1453,14 @@ packages:
   fflate@0.8.3:
     resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
-  filesystem-routing@0.2.1:
-    resolution: {integrity: sha512-xlYz4ag/uunqVgs5rd3bbmUFJTuXFa/eeZcM/jRoCYh+J8kLmeIsQM5PKL0NyHreQs+7URq1J31yxMm+z/nh4g==}
+  filesystem-routing@0.3.0:
+    resolution: {integrity: sha512-BjuV+R1tSjUlVOeXRhkmryzZ9qrS7WYmyYsyioGcmFFnQ53TzJmApyrMjQaevsEDUi/UdXEESFsYrx3SVPM5mw==}
     peerDependencies:
+      '@tsrx/oxc': '>=0.9.0'
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
     peerDependenciesMeta:
+      '@tsrx/oxc':
+        optional: true
       vite:
         optional: true
 
@@ -3143,7 +3146,7 @@ snapshots:
 
   fflate@0.8.3: {}
 
-  filesystem-routing@0.2.1(vite@8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0)):
+  filesystem-routing@0.3.0(vite@8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0)):
     dependencies:
       '@babel/core': 7.29.7
       '@types/babel__core': 7.20.5
