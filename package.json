@@ -45,7 +45,7 @@
     "@vanilla-extract/vite-plugin": "^5.2.6",
     "fast-png": "^8.0.0",
     "jsdom": "^30.0.1",
-    "oxfmt": "^0.63.0",
+    "oxfmt": "^0.67.0",
     "oxlint": "^1.78.0",
     "sitemap": "^9.0.1",
     "typescript": "^7.0.2",
