@@ -41,7 +41,7 @@
     "@tanstack/markdown": "0.0.13",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/user-event": "^14.6.4",
-    "@types/node": "^22.10.0",
+    "@types/node": "^24.0.0",
     "@vanilla-extract/vite-plugin": "^5.2.6",
     "fast-png": "^8.0.0",
     "jsdom": "^30.0.1",
