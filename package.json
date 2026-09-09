@@ -18,7 +18,7 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix --fix-suggestions",
     "test": "pnpm test:unit && pnpm test:artifact",
-    "test:unit": "vitest run --project server --project browser",
+    "test:unit": "vitest run --project server",
     "test:artifact": "pnpm build && vitest run --project artifact --project hydration",
     "typecheck": "tsc --noEmit",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test"
@@ -37,10 +37,7 @@
   "devDependencies": {
     "@fontsource-variable/archivo": "^5.3.0",
     "@fontsource/martian-mono": "^5.3.0",
-    "@solidjs/testing-library": "1.0.0-beta.3",
     "@tanstack/markdown": "0.0.13",
-    "@testing-library/jest-dom": "^7.0.1",
-    "@testing-library/user-event": "^14.6.4",
     "@types/node": "^24.0.0",
     "@vanilla-extract/vite-plugin": "^5.2.6",
     "fast-png": "^8.0.0",

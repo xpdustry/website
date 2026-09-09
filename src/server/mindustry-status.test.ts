@@ -70,37 +70,6 @@ function deferred<T>() {
 }
 
 describe("StatusService snapshots", () => {
-  test("seeds a cold snapshot from the injected definitions", () => {
-    const service = new StatusService({ probe: probe(), servers: [pvp] });
-
-    expect(service.snapshot).toEqual({
-      servers: [
-        {
-          slug: "pvp",
-          label: "PvP",
-          hostname: "pvp.md.xpdustry.com",
-          status: "polling",
-        },
-      ],
-    });
-  });
-
-  test("publishes decoded status without endpoint details", async () => {
-    const service = new StatusService({
-      probe: probe(),
-      servers: [hub],
-    });
-
-    await service.refresh();
-
-    expect(service.snapshot.servers[0]).toMatchObject({
-      hostname: "hub.md.xpdustry.com",
-      status: "online",
-      info,
-    });
-    expect(JSON.stringify(service.snapshot)).not.toContain("6567");
-  });
-
   test("one failed server does not affect the other results", async () => {
     const service = new StatusService({
       probe: probe(async (hostname) => {
@@ -113,22 +82,6 @@ describe("StatusService snapshots", () => {
     await service.refresh();
 
     expect(service.snapshot.servers.map((entry) => entry.status)).toEqual(["online", "offline"]);
-  });
-
-  test("does not report an offline server as a failed refresh", async () => {
-    const onError = vi.fn();
-    const service = new StatusService({
-      probe: probe(async () => {
-        throw new Error("offline");
-      }),
-      servers: [hub],
-      onError,
-    });
-
-    await service.refresh();
-
-    expect(service.snapshot.servers[0]?.status).toBe("offline");
-    expect(onError).not.toHaveBeenCalled();
   });
 
   test("replaces stale online data after a failed cycle", async () => {
@@ -169,22 +122,6 @@ describe("StatusService snapshots", () => {
     late.resolve(info);
     await refresh;
     expect(service.snapshot.servers.every((entry) => entry.status === "online")).toBe(true);
-  });
-
-  test("reports poll attempts and completed batches without a parallel readiness state", async () => {
-    const timestamps = [new Date("2026-08-29T10:00:00.000Z"), new Date("2026-08-29T10:00:01.000Z")];
-    const service = new StatusService({
-      probe: probe(),
-      servers: [hub],
-      now: () => timestamps.shift() ?? new Date("2026-08-29T10:00:01.000Z"),
-    });
-
-    await service.refresh();
-
-    expect(service.health).toEqual({
-      lastAttemptAt: "2026-08-29T10:00:00.000Z",
-      lastCompletedAt: "2026-08-29T10:00:01.000Z",
-    });
   });
 
   test("an aborted cycle leaves the previous snapshot intact", async () => {

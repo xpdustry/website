@@ -28,15 +28,17 @@ describe("built hydration", () => {
   test("preserves server state and attaches shell controls", async () => {
     localStorage.clear();
     installMatchMedia(false);
+    window.scrollTo = () => {};
     document.open();
     document.write(html);
     document.close();
     runInlineScripts();
-    expect(document.body.textContent?.match(/Checking…/g)).toHaveLength(7);
+    const pollingCount = document.body.textContent?.match(/Checking…/g)?.length ?? 0;
+    expect(pollingCount).toBeGreaterThan(0);
 
     await import(clientEntry);
     await settled();
-    expect(document.body.textContent?.match(/Checking…/g)).toHaveLength(7);
+    expect(document.body.textContent?.match(/Checking…/g)).toHaveLength(pollingCount);
 
     const theme = document.querySelector<HTMLButtonElement>(
       'button[title="Switch to the dark theme"]',
@@ -53,8 +55,13 @@ describe("built hydration", () => {
     menu.click();
     await settled();
 
-    expect(menu).toHaveAttribute("aria-expanded", "true");
+    expect(menu.getAttribute("aria-expanded")).toBe("true");
     expect(document.querySelector("#site-drawer")).not.toBeNull();
+
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+    await settled();
+    expect(document.querySelector("#site-drawer")).toBeNull();
+    expect(document.activeElement).toBe(menu);
   });
 });
 

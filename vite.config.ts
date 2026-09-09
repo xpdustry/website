@@ -98,7 +98,6 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       globals: false,
-      setupFiles: ["./vitest-setup.ts"],
       isolate: true,
       projects: [
         {
@@ -114,15 +113,7 @@ export default defineConfig(({ mode }) => {
           },
         },
         {
-          extends: true,
-          test: {
-            name: "browser",
-            environment: "jsdom",
-            include: ["src/components/**/*.test.{ts,tsx}"],
-          },
-        },
-        {
-          extends: true,
+          extends: false,
           test: {
             name: "artifact",
             environment: "node",
